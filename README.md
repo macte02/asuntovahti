@@ -5,12 +5,13 @@
 ![pandas](https://img.shields.io/badge/pandas-data%20pipeline-150458?logo=pandas&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/deployed-Ubuntu%20VM-E95420?logo=ubuntu&logoColor=white)
 
-Asuntovahti ("housing watch") estimates what a Finnish home is actually worth, based on what similar
-homes really sold for, not on asking prices. For every listing on the market it shows a price range,
-the comparable sales behind it, how confident the model is and why, and what the home would cost per month.
+Asuntovahti ("housing watch") is my project for working out what Finnish homes are actually worth, based on
+what similar homes really sold for rather than on asking prices. For every listing on the market it shows a
+price range, the comparable sales behind it, how sure the model is (and why), and roughly what the place would
+cost per month.
 
-> **This repository is a showcase.** The source code and data are private because the data comes from
-> third-party sources. Happy to walk through the code in an interview; reach me on
+> Heads up: this repo is just a showcase. The code and data stay private since the data comes from
+> third-party sites. Happy to walk through the code in an interview, just message me on
 > [LinkedIn](https://www.linkedin.com/in/mac-teppo).
 
 ![Asuntovahti dashboard](assets/dashboard.png)
@@ -55,9 +56,9 @@ flowchart LR
 
 ## Validation
 
-The model is trained on sales up to **6 March 2026** and tested on the **10,412 sales from 7 March to
-30 June 2026**, excluding addresses it saw in training. That mirrors real use: pricing homes the model
-has never seen, in a market that has moved on since training.
+I trained the model on sales up to **6 March 2026** and tested it on the **10,412 sales from 7 March to
+30 June 2026**, leaving out addresses it had already seen. A random split would probably flatter the numbers, but
+this is closer to real use: pricing homes the model has never seen, in a market that has moved since.
 
 ![Estimate vs actual price](assets/estimate_vs_actual.png)
 
